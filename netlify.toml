@@ -1,0 +1,29 @@
+[Settings]
+  ID = ""
+  Path = ""
+
+[build]
+  publish = "dist"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Referrer-Policy = "same-origin"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Strict-Transport-Security = "max-age=31536000"
+    Content-Security-Policy = "frame-ancestors 'self'"
+    # Content-Security-Policy-Report-Only = "default-src https: 'unsafe-inline' 'unsafe-eval'"
+    Link = '''
+    <//images.ctfassets.net>;rel=dns-prefetch, \
+    <//images.ctfassets.net>;rel=preconnect, \
+    </public/css/seldon.css>;rel=preload;as=style, \
+    </fonts/gt-america-light.woff>;rel=preload;as=font;type=font/woff;crossorigin'''
+# </fonts/gt-america-regular.woff>;rel=preload;as=font;type=font/woff;crossorigin, \
+
+# Redirect domain aliases to primary domain
+# [[redirects]]
+#   from = "https://catalyze.io/*"
+#   to = "https://datica.com/:splat"
+#   status = 301
+#   force = true
