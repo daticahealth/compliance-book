@@ -33,6 +33,12 @@ html(lang='en')
         //-   function gtag(){dataLayer.push(arguments);}
         //-   gtag('js', new Date());
         //-   gtag('config', '#{data.ga}');
+        script.
+            if (!('IntersectionObserver' in window)) {
+                var script = document.createElement("script");
+                script.src = "https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js";
+                document.getElementsByTagName('head')[0].appendChild(script);
+            }
     body
         block content
         block foot
