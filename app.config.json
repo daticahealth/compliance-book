@@ -1,10 +1,10 @@
 {
-	"title": "Kratos Boilerplate",
-	"description": "A simple boilerplate for creating a static PWA using Webpack, Pug, Stylus and PostCSS",
-	"url": "https://github.com/LFeh/kratos-boilerplate",
+	"title": "Complete Cloud Compliance",
+	"description": "How regulated companies de-risk the cloud and kickstart transformation - a book by Travis Good, MD & Kris Gosser",
+	"url": "https://github.com/daticahealth/compliance-book",
 	"logo": "images/logo.png",
 	"theme_color": "#333333",
-	"short_name": "Kratos",
+	"short_name": "ComplianceBook",
 	"ga": "x",
-	"twitter": "@lfeh"
+	"twitter": "@daticahealth"
 }

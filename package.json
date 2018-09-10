@@ -1,7 +1,7 @@
 {
   "name": "kratos-boilerplate",
   "version": "2.1.0",
-  "title": "Kratos Boilerplate",
+  "title": "Book static site",
   "description": "A simple boilerplate for creating a static PWA using Webpack, Pug, PostCSS and CSS Modules",
   "homepage": "https://github.com/LFeh/kratos-boilerplate",
   "browserslist": [

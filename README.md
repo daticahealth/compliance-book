@@ -1,8 +1,5 @@
-<p align="center">
-  <img src="src/images/logo.png" width="200">
-</p>
-
-# Kratos Boilerplate
+# Complete Cloud ComplianceBook
+## Based on [Kratos Boilerplate](https://github.com/LFeh/kratos-boilerplate)
 
 > A simple boilerplate for creating a static PWA using Webpack, Pug, PostCSS and CSS Modules
 
