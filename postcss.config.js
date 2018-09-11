@@ -3,19 +3,6 @@ module.exports = {
     'autoprefixer': {},
     'rucksack-css': {},
     'lost': {},
-    'postcss-font-magician': {
-        // hosted: ['./src/fonts', /fonts],
-        variants: {
-            'sentinel': {
-                '300': [],
-                '500': []
-            },
-            'gt-america': {
-                '300': [],
-                '700': []
-            }
-        }
-    },
     'cssnano': {},
     'postcss-modules': {
       getJSON: function(cssFileName, json, outputFileName) {
@@ -32,3 +19,17 @@ module.exports = {
     }
   }
 };
+
+// 'postcss-font-magician': {
+//     // hosted: ['./src/fonts', /fonts],
+//     variants: {
+//         'sentinel': {
+//             '300': [],
+//             '500': []
+//         },
+//         'gt-america': {
+//             '300': [],
+//             '700': []
+//         }
+//     }
+// },
