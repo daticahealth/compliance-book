@@ -46,7 +46,31 @@
         font-size: 1.8rem
     .headline-4
         font-size: 1rem
-
+    // lists
+    ol.big-numbers
+        list-style: none;
+        counter-reset: counter-bignum
+        li
+            counter-increment: counter-bignum
+            margin: 0 0 1rem 0
+            position: relative
+        li::before
+            content: counter(counter-bignum)
+            color: white
+            font-size: 1.5rem
+            font-weight: bold
+            position: absolute
+            $size = 32px
+            left: calc(-1 * 32px - 10px)
+            line-height: $size
+            width:  $size
+            height: $size
+            top: 0
+            // transform: rotate(-10deg)
+            background: $teal-dark
+            border-radius: 50%
+            text-align: center
+            // box-shadow: 1px 1px 0 #999
 
     .group
         margin-bottom: 2rem
