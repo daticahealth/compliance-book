@@ -1,5 +1,6 @@
 import * as offline from 'offline-plugin/runtime';
 import './app.styl';
+import './components/form/form.js';
 import './components/intro/intro.js';
 import lozad from 'lozad';
 
