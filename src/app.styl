@@ -1,10 +1,11 @@
 @import 'styles/core'
-@import 'styles/hsforms'
 
 :global
+    @import 'styles/hsforms'
     html
         font-family: $font-serif
         font-size: 16px
+        font-size: calc(102% + 0.2vw)
     body
         padding: 0
         margin: 0
@@ -12,25 +13,46 @@
     p, li
         margin-top: 0
         margin-bottom: 1.5rem
-        line-height: 1.5
+        line-height: 1.6
+        letter-spacing: 0.03em
     .font-sans
         font-family: $font-sans
+        font-weight: normal
     .font-serif
         font-family: $font-serif
+        .text-light, &.text-light
+            font-family: "Sentinel Light", serif
+    .text-light
+        font-weight: 300
+    .text-bold
+        font-weight: bold
 
     .content
         max-width: $screen-sm
         margin-left: auto
         margin-right: auto
-
+    h1, h2, h3, h4, h5, h6
+        margin: 0
     .headline-1, .headline-2, .headline-3, .headline-4
         font-weight: bold
         color: $blue-dark
         font-family: $font-sans
+        margin-bottom: 0.5em
+    .headline-1
+        font-size: 3.5rem
+    .headline-2
+        font-size: 2rem
+    .headline-3
+        font-size: 1.8rem
+    .headline-4
+        font-size: 1rem
 
+
+    .group
+        margin-bottom: 2rem
     .box
         padding: 2rem
-        padding: calc(0.5rem + 4vw)
+        padding: calc(0.5rem + 5vw)
 
     .box-white
         background-color: white
@@ -54,6 +76,8 @@
     .box-dark, .box-navy
         .headline-1, .headline-2, .headline-3, .headline-4
             color: $teal-light
+        p
+            font-family: "Sentinel Light", serif
 
     .border-red
         border-color: $red
@@ -62,3 +86,9 @@
         border-width: 8px 0 0 0;
     .border-bottom-8
         border-width: 0 0 8px 0;
+    .drop
+        box-shadow: 2px 2px 13px alpha($blue-dark, 0.3)
+    .button
+        button(1rem)
+    a.button
+        text-decoration: none

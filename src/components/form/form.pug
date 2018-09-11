@@ -1,21 +1,22 @@
 - var css = require('./form-css.json');
-
-#hsFormContainer(class=css.form)
-    script.
-        hbspt.forms.create({
-        portalId: "1695915",
-        formId: "f81d1947-0303-45d2-b02b-c441d33a0495",
-        target: '#hsFormContainer',
-        onFormSubmit: function($form) {
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-                    'event' : 'GAEvent',      
-                    'eventCategory' : 'Compliance Book',
-                    'eventAction' : 'Form Submission',
-                    'eventLabel' : 'Get Notified',
-                    'eventValue' : '5'
-                });
-                },
-            css: "",
-            cssRequired: ""
-        });
+.hs-wrapper.box-white.drop
+    h3(class=css.title) Get the Book
+    #hsFormContainer
+        script.
+            hbspt.forms.create({
+            portalId: "1695915",
+            formId: "f81d1947-0303-45d2-b02b-c441d33a0495",
+            target: '#hsFormContainer',
+            onFormSubmit: function($form) {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                        'event' : 'GAEvent',      
+                        'eventCategory' : 'Compliance Book',
+                        'eventAction' : 'Form Submission',
+                        'eventLabel' : 'Get Notified',
+                        'eventValue' : '5'
+                    });
+                    },
+                css: "",
+                cssRequired: ""
+            });

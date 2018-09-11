@@ -2,15 +2,60 @@
 
 input
     border: none
-
-.wrapper
+input:not([type="submit"])
+.hs-wrapper
+    max-width: 26rem
+    margin-right: auto
+    margin-left: auto
+    box-sizing: border-box
+    padding: 1rem
+    padding: calc(0.5rem + 2.5vw)
+    input:not([type="checkbox"]), textarea, fieldset
+        width: 100%
+        padding: 0
     font-family: $font-sans
+    font-weight: normal
     .hs-form
-        fieldset
+        .form-columns-1, .form-columns-2, .form-columms-3
             border: none
-            .form-columns-1, .form-columns-2
-                
+        label
+            font-size: 0.9rem
+            padding-bottom: 1rem
+            font-weight: 300
+            // color: $gray-dark
+            // letter-spacing: 0.3em
+            // text-transform: uppercase
         ul
             list-style-type: none
-            margin-left: 0
-            padding-left: 0
+            margin: 0
+            padding: 0
+        li
+            margin-bottom: 0.5rem
+        input
+            margin-top: 0.3rem
+            font-size: 1rem
+            padding: 0.3rem 0
+            &[type="email"]
+                font-family: monospace
+            &[type="checkbox"]
+                font-size: 1.2rem
+                margin-right: 0.5rem
+        .hs-form-field
+            padding-bottom: 1.5rem
+        .hs-input
+            border: 0
+            border-bottom: 2px solid alpha(black, 0.25)
+            transition: border-color $speed linear
+            &:focus
+                border-color: black
+        .hs-richtext
+            padding: 0
+            font-size: 80%
+            font-family: $font-serif
+        .hs-error-msgs
+            label, label span
+                font-size: smaller
+                // font-weight: bold
+                color: $red
+        .hs-button
+            button(1rem)

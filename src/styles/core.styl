@@ -1,2 +1,15 @@
 @import 'core/variables'
 @import 'core/fonts'
+
+button(pad = 1rem)
+    border: none
+    background-color: $teal-dark
+    color: white
+    font-weight: 500
+    font-family: $font-sans
+    font-size: 1.1rem
+    padding: pad
+    letter-spacing: 0.05em
+    transition: background-color $speed linear
+    &:hover
+        background-color: $teal-darker
