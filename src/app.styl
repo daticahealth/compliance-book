@@ -2,17 +2,39 @@
 
 :global
     html
-        font-family: $font-sans
+        font-family: $font-serif
         font-size: 16px
+    body
+        padding: 0
+        margin: 0
+        line-height: 1.3
+    p, li
+        margin-top: 0
+        margin-bottom: 1.5rem
+        line-height: 1.5
 
-    .headline-1, .headline-2, .headline-3
+    .content
+        max-width: $screen-sm
+        margin-left: auto
+        margin-right: auto
+    .headline-1, .headline-2, .headline-3, .headline-4
         font-weight: bold
+        color: $blue-dark
+        font-family: $font-sans
 
     .box
         padding: 2rem
-        padding: calc(2rem + 5vw)
+        padding: calc(0.5rem + 4vw)
+
     .box-white
         background-color: white
+        color: $black
+    .box-light
+        background-color: $gray-lighter
+        color: $black
+
+    .box-teal
+        background-color: $teal-light
         color: $black
 
     .box-dark
@@ -22,3 +44,15 @@
     .box-navy
         background-color: $blue-dark
         color: white
+
+    .box-dark, .box-navy
+        .headline-1, .headline-2, .headline-3, .headline-4
+            color: $teal-light
+
+    .border-red
+        border-color: $red
+        border-style: solid;
+    .border-top-8
+        border-width: 8px 0 0 0;
+    .border-bottom-8
+        border-width: 0 0 8px 0;

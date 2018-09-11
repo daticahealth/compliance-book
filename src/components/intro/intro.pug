@@ -1,9 +1,11 @@
 - var css = require('./intro-css.json');
 
-section(class=css.intro)
+div(class=css.intro).content
     img.lozad(alt="Complete Compliance Book", data-src="https://images.ctfassets.net/frc0x3twtm4f/4NsK3lp2NGGCYCm0uC0i0S/e1b7ade9c1344896efeb6db3cf6056d1/compliance_book__3d_front_and_back_mockup.png?w=300")
     h1(class=css.title) Complete Cloud Compliance
     article
-        p(class=css.lead) How regulated companies de-risk the cloud and kickstart transformation
-        p(class=css.authors) By Travis Good, MD &amp; Kris Gosser
-    aside
+        .group
+            p(class=css.lead) How regulated companies de-risk the cloud and kickstart transformation
+            p(class=css.authors) By Travis Good, MD &amp; Kris Gosser
+        a.button(href="#cta") Get your copy
+        
