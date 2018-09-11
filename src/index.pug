@@ -2,6 +2,7 @@ extends layout.pug
 
 block content
     include components/intro/intro.pug
+    +hsForm('formTop')
     section#description
         h2.headline-2 Regulated companies have a hard problem to solve.
         :markdown-it(linkify)
@@ -42,7 +43,7 @@ block content
             li The Achievable Mandate
                 p Adopting the cloud isn't something you <em>should</em> do—it's something you <em>must</em> do. Compliance isn't something you ought to do, but the right thing to do. Combining them is a mandate, but the good news is it's entirely possible to achieve.
     section#form2
-        
+        +hsForm('formBottom')
     section#authors
         h2.headline-3 About the Authors
         h3.headline-4 Travis Good, MD

@@ -1,4 +1,27 @@
 - var data = require('../app.config.json');
+mixin hsForm(targetID)
+    if targetID
+        - var formTarget = targetID
+    else
+        - var formTarget = 'hsFormContainer'
+    div(id=formTarget)
+    script.
+        hbspt.forms.create({
+        portalId: "1695915",
+        formId: "f81d1947-0303-45d2-b02b-c441d33a0495",
+        target: '##{formTarget}',
+        onFormSubmit: function($form) {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                    'event' : 'GAEvent',      
+                    'eventCategory' : 'Compliance Book',
+                    'eventAction' : 'Form Submission',
+                    'eventLabel' : 'Get Notified',
+                    'eventValue' : '5'
+                });
+                },
+            css: ""
+        });
 
 doctype html
 html(lang='en')
@@ -27,19 +50,30 @@ html(lang='en')
         meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=5')
         meta(name='theme-color' content=data.theme_color)
         link(rel='shortcut icon' type='image/favicon' href='favicon.ico')
+        //- GTM head script
+        script.
+            dataLayer = [{
+                currentBranch: '{{ BRANCH }}'
+            }];
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-MVXG5LZ');
         //- script(async src='https://www.googletagmanager.com/gtag/js?id=' + data.ga)
         //- script.
         //-   window.dataLayer = window.dataLayer || [];
         //-   function gtag(){dataLayer.push(arguments);}
         //-   gtag('js', new Date());
         //-   gtag('config', '#{data.ga}');
-        script.
-            if (!('IntersectionObserver' in window)) {
-                var script = document.createElement("script");
-                script.src = "https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js";
-                document.getElementsByTagName('head')[0].appendChild(script);
-            }
     body
+        <!--[if lte IE 8]><script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script><![endif]-->
+        script(charset='utf-8' type='text/javascript' src='//js.hsforms.net/forms/v2.js')
+        //- Google Tag Manager (noscript)
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVXG5LZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         block content
         block foot
             section#footer
+        //- hubspot script fallback
+        //- lozad polyfill with feature check
+        //- script.

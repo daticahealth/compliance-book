@@ -20,3 +20,15 @@ const observer = lozad('.lozad', {
     }
 });
 observer.observe();
+
+if (!('IntersectionObserver' in window)) {
+    var script = document.createElement("script");
+    script.src = "https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js";
+    document.getElementsByTagName('head')[0].appendChild(script);
+}
+
+window.jQuery = window.jQuery || (() => ({
+    // these are all methods required by HubSpot
+  change: () => {},
+  trigger: () => {},
+}));
