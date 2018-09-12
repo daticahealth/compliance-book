@@ -19,10 +19,11 @@
     a
         color: $blue
         text-decoration: none
-        transition: border-bottom $speed opacity, color $speed opacity
-        border-bottom: 1px solid transparent
+        transition: border-bottom linear $speed, color linear $speed
+        border-bottom: 2px solid transparent
+        font-weight: bold
         &:hover
-            border-bottom: 1px solid $blue
+            border-color: $blue
     .content
         max-width: $screen-sm - 2rem
         margin-left: auto
@@ -50,7 +51,15 @@
             counter-increment: counter-bignum
             margin: 0 0 1rem 0
             position: relative
+            font-family: $font-sans-light
+            font-weight: $font-weight-light
+            font-size: 1rem
+            letter-spacing: -0.01em
+            a
+                font-family: $font-sans
+                font-weight: bold
         li::before
+            font-family: $font-serif
             content: counter(counter-bignum)
             color: white
             font-size: 1.5rem
