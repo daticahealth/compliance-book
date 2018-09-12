@@ -1,11 +1,11 @@
 {
-	"title": "Complete Cloud Compliance",
-	"description": "How regulated companies de-risk the cloud and kickstart transformation - a book by Travis Good, MD & Kris Gosser",
-	"url": "https://github.com/daticahealth/compliance-book",
-	"logo": "images/logo.png",
-	"theme_color": "#333333",
-	"short_name": "ComplianceBook",
-  "share_image": "https://images.ctfassets.net/189dvqdsjh46/1NSPdxWObme2qAOOkY6MUe/eed0b5262ff4f7948d706a304740b5c3/compliance-book-share.jpg",
-	"ga": "x",
-	"twitter": "@daticahealth"
+    "title": "Complete Cloud Compliance",
+    "description": "How regulated companies de-risk the cloud and kickstart transformation - a book by Travis Good, MD & Kris Gosser",
+    "url": "https://github.com/daticahealth/compliance-book",
+    "logo": "images/logo.png",
+    "theme_color": "#333333",
+    "short_name": "ComplianceBook",
+    "share_image": "https://images.ctfassets.net/189dvqdsjh46/1NSPdxWObme2qAOOkY6MUe/eed0b5262ff4f7948d706a304740b5c3/compliance-book-share.jpg",
+    "ga": "x",
+    "twitter": "@daticahealth"
 }
