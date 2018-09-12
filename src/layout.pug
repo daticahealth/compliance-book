@@ -1,4 +1,10 @@
 - var data = require('../app.config.json');
+//- - var gallery = require('../app.gallery.json');
+mixin avatar(title, image, url, style)
+    - var face_attr = '?fit=thumb&w=200&h=200&f=face'
+    .person(class!=attributes.wrapper)
+        a.person-link(href!=attributes.url, title!=attributes.title, rel='author')
+            img.avatar(src!=attributes.image+face_attr, alt!=attributes.title, class!=attributes.style)
 mixin hsForm(targetID)
     if targetID
         - var formTarget = targetID
