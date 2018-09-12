@@ -84,4 +84,43 @@ html(lang='en')
             section#footer
         //- hubspot script fallback
         //- lozad polyfill with feature check
-        //- script.
+        script(type='application/ld+json').
+            {
+              "@context":"http://schema.org",
+              "@type":"Book",
+              "name" : "#{data.title}",
+              "author": [{
+                  "@type":"Person",
+                  "name":"Travis Good, MD"
+                },
+                {
+                  "@type":"Person",
+                  "name":"Kris Gosser"
+                }],
+              "url" : "https://www.datica.com/leadership",
+              "workExample" : [{
+                "@type": "Book",
+                "isbn": "",
+                "bookEdition": "2nd Edition",
+                "bookFormat": "http://schema.org/Hardcover",
+                "potentialAction":{
+                "@type":"ReadAction",
+                "target":
+                  {
+                    "@type":"EntryPoint",
+                    "urlTemplate":"http://www.barnesandnoble.com/store/info/offer/0316769487?purchase=true",
+                    "actionPlatform":[
+                      "http://schema.org/DesktopWebPlatform",
+                      "http://schema.org/IOSPlatform",
+                      "http://schema.org/AndroidPlatform"
+                    ]
+                  },
+                  "expectsAcceptanceOf":{
+                    "@type":"Offer",
+                    "Price":"free",
+                    "priceCurrency":"USD",
+                    "availability": "http://schema.org/PreOrder"
+                  }
+                }
+              }]
+            }
