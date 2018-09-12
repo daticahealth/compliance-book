@@ -1,0 +1,43 @@
+.grid-item
+    border-radius: 5px
+    overflow: hidden
+    img
+        width: 100%
+        height: 100%
+    @supports (display: grid)
+        // padding: 1rem
+        // background-color: config('colors.grey-11')
+        // // &:nth-child(odd)
+        // //     background-color: config('colors.grey-12')
+        // &:nth-of-type(1)
+        //     grid-square(3)
+        // &:nth-of-type(2)
+        //     grid-square(2)
+        // &:last-of-type
+        //     grid-square(3)
+
+        grid-column-end: span 2
+        grid-row-end: span 2
+
+.grid-layout
+    @supports (display: grid)
+        // base settings, small viewport
+        $size = 100px
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax($size, 1fr))
+        grid-gap: calc(0.5rem + 2vw)
+        grid-auto-rows: minmax($size, auto)
+        grid-auto-flow: dense
+        // padding: 10px
+
+.item-span-2
+    grid-column-end: span 2
+    grid-row-end: span 2
+
+.item-span-3
+    grid-column-end: span 3
+    grid-row-end: span 3
+
+.item-span-4
+    grid-column-end: span 4
+    grid-row-end: span 4

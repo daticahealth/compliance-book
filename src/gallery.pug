@@ -1,0 +1,9 @@
+- var images = [{size: 4, desc: 'Global compliance map', url: 'https://images.ctfassets.net/189dvqdsjh46/6k2pDloNagiuaqascmioii/2b939807b7f46f6db816eb79ea3c081b/book_art_-_global_compliance_ma__thumb.png'}, {size: 2, desc: 'Audit workflow', url: 'https://images.ctfassets.net/189dvqdsjh46/6K03QzqSL6YMyicsKweKqU/359e2e4d8693fa9d4fe0191f8fa980f0/book_art_-_audit_workflow__thumb.png'}, {size: 4, desc: 'HITRUST History', url: 'https://images.ctfassets.net/189dvqdsjh46/7kSxXitMHu6iSwkKUkKgIw/29f5a8263638a0f44f530d44084df2e2/book_art_-_hitrust_history__thumb.png'}, {size: 3, desc: 'shared responsibility', url: 'https://images.ctfassets.net/189dvqdsjh46/1EsxO0VOok6cMkiueKaAEo/fa73bfb5183deb53743c25638c658b27/book_art_-_shared_responsibility__thumb.png'}, {size: 2, desc: 'security concerns', url: 'https://images.ctfassets.net/189dvqdsjh46/6xAya4mdW0gW2As4acmssc/f1fd2f72d771a01ae217dc3594282c23/book_art_-_concerns.png'}, {size: 2, desc: 'Cloud Architecture', url: 'https://images.ctfassets.net/189dvqdsjh46/6Dbtno8U9O6w2EMECI4IUU/f5a19e59f657c88deae7b91df9eceedf/book_art_-_cloud_arch__thumb.png'}, {size: 2, desc: 'Managing Managed Services', url: 'https://images.ctfassets.net/189dvqdsjh46/2SHj2lcK1auAsOCyQKMSi2/737b2fab1bbf5b2abe34b4e156edf1d0/book_art_-_managed_service_mgmt__thumb.png'}]
+.grid-layout
+    //- .grid-item
+    .grid-item.item-span-3
+        h2.headline-3 Visual storytelling
+        p Complete Cloud Compliance focuses on distilling complex topics into easy-to-understand stories. The book makes heavy use of illustrations, charts, and graphs wherever possible.
+    each image, n in images
+        .grid-item.drop(class='item-span-'+image.size)
+            img.img-fit.lozad(src=image.url+'?w=200&fm=jpg&q=10', data-src=image.url+'?w=800', alt=image.desc)

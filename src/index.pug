@@ -1,14 +1,14 @@
 extends layout.pug
 
 block content
-    section#intro.box
+    section#intro.box.grad-light-radial
         .content
             include components/intro/intro.pug
             //- +hsForm('formTop')
     section#description.box.box-navy.border-red.border-bottom-8
         .content
             h2.headline-2 Regulated companies have a hard problem to solve.
-            .font-serif.text-light
+            .font-serif.font-light
                 p They run the risk of becoming obsolete due to an inability to adopt new technology fast enough. Incumbent business models will be out-flanked by shifting customer expectations brought on by improved digital experiences. Market conditions are out of their control. Even healthcare, the most regulated industry with the heartiest entrenchment and uniquely perverse economic incentives, is remarkably close to complete upheaval due to a litany of world-changing ideas, like mobile devices, Internet of Things, big data, and artificial intelligence. It all stems from the mother of all recent innovations, the cloud. The root challenge is the adoption of cloud computing in order to remain relevant. If achieved, compliant cloud computing becomes an organizational differentiator.
                 
                 p Compliance contributes to this existential threat because it prompts the cloud to be viewed as a liable cost center by most regulated companies. But that’s wrong. It’s actually a leverageable asset that is at the foundation of modern business transformation. 
@@ -16,7 +16,7 @@ block content
                 p Complete Cloud Compliance is a program developed after years of managing high-stakes compliance requirements across mission critical healthcare workloads. It is a chance to control destiny. The program is written for healthcare organizations, but all while under the principle that best practices are best practices, meaning the insights shared can be applied across global regimes and any industry.
     section#ideas.box
         .content
-            h2.headline-2 The 9 Big Ideas
+            h2.headline-2.font-serif.text-center The 9 Big Ideas
             ol.big-numbers
                 li When controlled, compliance is actually a competitive edge.
                 li The cloud is no longer other people's computers. It is managed services.
@@ -27,12 +27,11 @@ block content
                 li The cloud is global, so compliance is now global.
                 li Cloud compliance comes down to data management. The three verbs of data are store, compute, and transmit.
                 li Data sources are splintering instead of unifying, making compliance more complex.
-    //- section#visuals.box.box-light
-        .content
-            h2.headline-3 Visual storytelling
-            p Complete Cloud Compliance focuses on distilling complex topics into easy-to-understand stories. The book makes heavy use of illustrations, charts, and graphs wherever possible.
+    section#visuals.box.box-navy
+        include gallery.pug
     section#chapters.box
         .content
+            h2.headline-2.font-serif.text-center Chapters
             ol.chapter-list
                 li
                     span.headline-4 The Business Case for Compliance
@@ -61,7 +60,9 @@ block content
     section#authors.box.box-dark
         .content
             h2.headline-3 About the Authors
-            h3.headline-4 Travis Good, MD
-            p.text-light With a passion for healthcare and an eye towards market changing transformation, Travis blends his varied experience across medicine, cloud, and cybersecurity to develop impactful strategic initiatives. He has written extensively on healthcare technology and digital innovation and spoken at events like HIMSS, SXSW, AMIA, AHIMA, MedX, Health 2.0, and HITRUST Summit. As the co-Founder and CEO of Datica, he created the strategy and go-to-market vision for products now helping enable innovation on the cloud at hundreds of healthcare organizations. Travis grew up in Florida before bouncing around for college and graduate school, eventually settling in Colorado with his family.
-            h3.headline-4 Kris Gosser
-            p.text-light Kris likes to sit at the intersection of design, business, and technology to craft empathetic products for markets in need. He has been a Lean Startup practitioner across his twelve-year career as an entrepreneur spanning leadership roles in engineering, design, product, marketing, sales, and management. As the CMO of Datica, he interfaces with the healthcare industry to understand the challenges faced while guiding Datica's revenue machine towards growth targets. He helped write this book because he viewed a deeper understanding around the topic of cloud compliance as an essential ingredient to an improved society—the most regulated industries are often the most important to communities. A Wisconsin native, Kris and his family live in Seattle where they now call home.
+            h3.headline-4
+                a(href="https://datica.com/leadership/travis" title="About Travis Good, MD") Travis Good, MD
+            p.font-light With a passion for healthcare and an eye towards market changing transformation, Travis blends his varied experience across medicine, cloud, and cybersecurity to develop impactful strategic initiatives. He has written extensively on healthcare technology and digital innovation and spoken at events like HIMSS, SXSW, AMIA, AHIMA, MedX, Health 2.0, and HITRUST Summit. As the co-Founder and CEO of Datica, he created the strategy and go-to-market vision for products now helping enable innovation on the cloud at hundreds of healthcare organizations. Travis grew up in Florida before bouncing around for college and graduate school, eventually settling in Colorado with his family.
+            h3.headline-4
+                a(href="https://datica.com/leadership/kris-gosser" title="About Kris Gosser") Kris Gosser
+            p.font-light Kris likes to sit at the intersection of design, business, and technology to craft empathetic products for markets in need. He has been a Lean Startup practitioner across his twelve-year career as an entrepreneur spanning leadership roles in engineering, design, product, marketing, sales, and management. As the CMO of Datica, he interfaces with the healthcare industry to understand the challenges faced while guiding Datica's revenue machine towards growth targets. He helped write this book because he viewed a deeper understanding around the topic of cloud compliance as an essential ingredient to an improved society—the most regulated industries are often the most important to communities. A Wisconsin native, Kris and his family live in Seattle where they now call home.
