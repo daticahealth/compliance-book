@@ -1,8 +1,8 @@
 mixin avatar(title, image, url, style)
-    - var face_attr = '?fit=thumb&w=200&h=200&f=face'
+    //- - var face_attr = '?fit=thumb&w=200&h=200&f=face'
     .person(class!=attributes.wrapper)
         a.person-link(href!=attributes.url, title!=attributes.title, rel='author')
-            img.avatar(src!=attributes.image+face_attr, alt!=attributes.title, class!=attributes.style)
+            img.avatar.lozad(src!=attributes.image+'?fit=thumb&w=100&h=100&f=face&q=15', data-src=attributes.image+'?fit=thumb&w=200&h=200&f=face', alt!=attributes.title, class!=attributes.style)
 //- mixin hsForm(targetID)
 //-     if targetID
 //-         - var formTarget = targetID
