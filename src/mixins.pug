@@ -1,0 +1,28 @@
+mixin avatar(title, image, url, style)
+    - var face_attr = '?fit=thumb&w=200&h=200&f=face'
+    .person(class!=attributes.wrapper)
+        a.person-link(href!=attributes.url, title!=attributes.title, rel='author')
+            img.avatar(src!=attributes.image+face_attr, alt!=attributes.title, class!=attributes.style)
+//- mixin hsForm(targetID)
+//-     if targetID
+//-         - var formTarget = targetID
+//-     else
+//-         - var formTarget = 'hsFormContainer'
+//-     div(id=formTarget)
+//-     script.
+//-         hbspt.forms.create({
+//-         portalId: "1695915",
+//-         formId: "f81d1947-0303-45d2-b02b-c441d33a0495",
+//-         target: '##{formTarget}',
+//-         onFormSubmit: function($form) {
+//-             window.dataLayer = window.dataLayer || [];
+//-             window.dataLayer.push({
+//-                     'event' : 'GAEvent',      
+//-                     'eventCategory' : 'Compliance Book',
+//-                     'eventAction' : 'Form Submission',
+//-                     'eventLabel' : 'Get Notified',
+//-                     'eventValue' : '5'
+//-                 });
+//-                 },
+//-             css: ""
+//-         });

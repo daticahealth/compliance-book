@@ -1,11 +1,11 @@
 - var css = require('./intro-css.json');
-
-div(class=css.intro).content
-    img.lozad(alt="Complete Compliance Book", data-src="https://images.ctfassets.net/frc0x3twtm4f/4NsK3lp2NGGCYCm0uC0i0S/e1b7ade9c1344896efeb6db3cf6056d1/compliance_book__3d_front_and_back_mockup.png?w=300")
+- var data = require('../../../app.config.json');
+div(class=css.intro)
+    img.lozad(class=css.book alt='Complete Compliance Book', src=data.book_thumb+'?w=150&fm=png&fl=png8' data-src=data.book_thumb+'?w=600')
     h1(class=css.title) Complete Cloud Compliance
     article
         .group
             p(class=css.lead) How regulated companies de-risk the cloud and kickstart transformation
             p(class=css.authors) By Travis Good, MD &amp; Kris Gosser
-        a.button(href="#cta") Get Notified
+        a.button(href="#cta" title="Be notified when it's available") Get Notified
         

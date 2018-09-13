@@ -6,6 +6,7 @@
     "theme_color": "#333333",
     "short_name": "ComplianceBook",
     "share_image": "https://images.ctfassets.net/189dvqdsjh46/1NSPdxWObme2qAOOkY6MUe/eed0b5262ff4f7948d706a304740b5c3/compliance-book-share.jpg",
+    "book_thumb": "https://images.ctfassets.net/frc0x3twtm4f/4NsK3lp2NGGCYCm0uC0i0S/e1b7ade9c1344896efeb6db3cf6056d1/compliance_book__3d_front_and_back_mockup.png",
     "ga": "x",
     "twitter": "@daticahealth"
 }

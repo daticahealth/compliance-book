@@ -5,5 +5,5 @@
         h2.headline-3 Visual storytelling
         p Complete Cloud Compliance focuses on distilling complex topics into easy-to-understand stories. The book makes heavy use of illustrations, charts, and graphs wherever possible.
     each image, n in images
-        .grid-item.drop(class='item-span-'+image.size)
+        .grid-item.border-rounded-sm.drop(class='item-span-'+image.size)
             img.img-fit.lozad(src=image.url+'?w=200&fm=jpg&q=10', data-src=image.url+'?w=800', alt=image.desc)

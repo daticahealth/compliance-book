@@ -62,7 +62,7 @@
             font-family: $font-serif
             content: counter(counter-bignum)
             color: white
-            font-size: 1.5rem
+            font-size: 1rem
             font-weight: bold
             position: absolute
             $size = 32px
@@ -81,7 +81,7 @@
         margin-bottom: 2rem
     .box
         padding: 2rem
-        padding: calc(0.5rem + 5vw)
+        padding: calc(0.5rem + 6vw) calc(0.5rem + 5vw)
     .box-white
         background-color: white
         color: $black
@@ -112,7 +112,12 @@
     .img-fit
         object-fit: cover
     .grad-light-radial
+        background-color: white
         background: radial-gradient(ellipse at center, hsla(0,0%,100%,1) 47%,hsla(24,16%,92%,1) 100%);
+    .grad-teal-radial
+        background-color: $teal-light
+        background: radial-gradient(ellipse at center, lighten($teal-light, 10%) 47%, darken($teal-light, 5%) 100%);
+
     .border-red
         border-color: $red
         border-style: solid;
@@ -120,10 +125,13 @@
         border-width: 8px 0 0 0;
     .border-bottom-8
         border-width: 0 0 8px 0;
+    .border-rounded-sm
+        border-radius: 5px
+        overflow: hidden
     .drop
         box-shadow: 2px 2px 13px alpha($blue-dark, 0.3)
     .button
-        button(1rem)
+        button()
     a.button
         text-decoration: none
 
