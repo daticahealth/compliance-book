@@ -17,9 +17,13 @@
     Link = '''
     <//images.ctfassets.net>;rel=dns-prefetch, \
     <//images.ctfassets.net>;rel=preconnect, \
-    </public/css/seldon.css>;rel=preload;as=style, \
-    </fonts/gt-america-light.woff>;rel=preload;as=font;type=font/woff;crossorigin'''
-# </fonts/gt-america-regular.woff>;rel=preload;as=font;type=font/woff;crossorigin, \
+    </style.css>;rel=preload;as=style, \
+    </fonts/gt-america-light.woff2>;rel=preload;as=font;type=font/woff2;crossorigin, \
+    </fonts/gt-america-bold.woff2>;rel=preload;as=font;type=font/woff2;crossorigin, \
+    </fonts/gt-america-medium.woff2>;rel=preload;as=font;type=font/woff2;crossorigin, \
+    </fonts/sentinel-book.woff2>;rel=preload;as=font;type=font/woff2;crossorigin, \
+    </fonts/sentinel-bookitalic.woff2>;rel=preload;as=font;type=font/woff2;crossorigin, \
+    </fonts/sentinel-light.woff2>;rel=preload;as=font;type=font/woff2;crossorigin'''
 
 # Redirect domain aliases to primary domain
 # [[redirects]]
