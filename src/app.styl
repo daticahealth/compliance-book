@@ -17,13 +17,13 @@
         line-height: 1.6
         letter-spacing: 0.03em
     a
-        color: $blue
+        color: inherit
         text-decoration: none
         transition: border-bottom linear $speed, color linear $speed
-        border-bottom: 2px solid transparent
-        font-weight: bold
+        border-bottom: $border-width solid alpha($teal, 0.5)
+        // font-weight: bold
         &:hover
-            border-color: $blue
+            border-color: $teal-dark
     .content
         max-width: $screen-sm - 2rem
         margin-left: auto
@@ -38,9 +38,9 @@
     .headline-1
         font-size: 3.5rem
     .headline-2
-        font-size: 2rem
+        font-size: 2.3rem
     .headline-3
-        font-size: 1.8rem
+        font-size: 2rem
     .headline-4
         font-size: 1rem
     // lists
@@ -56,8 +56,8 @@
             font-size: 1rem
             letter-spacing: -0.01em
             a
-                font-family: $font-sans
-                font-weight: bold
+                // font-family: $font-sans
+                // font-weight: bold
         li::before
             font-family: $font-serif
             content: counter(counter-bignum)
@@ -100,7 +100,7 @@
     .box-navy
         background-color: $blue-dark
         color: white
-    .box-dark, .box-navy
+    .box-dark, .box-navy // dark containers
         .headline-1, .headline-2, .headline-3, .headline-4
             color: $teal-light
         p
@@ -108,7 +108,7 @@
         a
             color: $teal-light
             &:hover
-                border-bottom: 1px solid $teal-light
+                border-bottom: $border-width solid $teal-light
     .img-fit
         object-fit: cover
     .grad-light-radial
@@ -120,7 +120,10 @@
 
     .border-red
         border-color: $red
-        border-style: solid;
+        border-style: solid
+    .border-teal
+        border-color: $teal-dark
+        border-style: solid
     .border-top-8
         border-width: 8px 0 0 0;
     .border-bottom-8
@@ -140,9 +143,10 @@
         margin-left: 1.5rem
     .person
         a
+            border: none
             &:hover
                 text-decoration: none
-                border-bottom: none
+                border: none
     .avatar
         border-radius: 50%
     .size
