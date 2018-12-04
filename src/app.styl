@@ -26,8 +26,10 @@
             border-color: $teal-dark
     .content
         max-width: $screen-sm - 2rem
-        margin-left: auto
-        margin-right: auto
+        auto-margin()
+        &-lg
+            max-width: $screen-lg
+            auto-margin()
     h1, h2, h3, h4, h5, h6
         margin: 0
     .headline-1, .headline-2, .headline-3, .headline-4
@@ -116,7 +118,7 @@
         background: radial-gradient(ellipse at center, hsla(0,0%,100%,1) 47%,hsla(24,16%,92%,1) 100%);
     .grad-teal-radial
         background-color: $teal-light
-        background: radial-gradient(ellipse at center, lighten($teal-light, 10%) 47%, darken($teal-light, 5%) 100%);
+        background: radial-gradient(ellipse at center, lighten($teal-light, 40%) 47%, darken($teal-light, 5%) 100%);
 
     .border-red
         border-color: $red

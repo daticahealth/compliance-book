@@ -39,3 +39,20 @@
 .item-span-4
     grid-column-end: span 4
     grid-row-end: span 4
+
+// flexbox utils
+.flex
+    display: flex
+    flex-direction: column
+    flex-wrap: nowrap
+    justify-content: center
+    align-content: center
+    align-items: center
+
+.md-flex-row
+    @media screen and (min-width: $screen-sm)
+        flex-direction: row
+
+.flex-item
+    flex: 0 1 auto
+    align-self: auto

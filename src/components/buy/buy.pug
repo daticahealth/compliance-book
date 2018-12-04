@@ -1,0 +1,17 @@
+- var css = require('./buy-css.json');
+- var data = require('../../../app.config.json');
+div(class=css.buy)
+    .flex.md-flex-row
+        .flex-item
+            img.lozad(class=css.book alt='Complete Compliance Book', src=data.book_thumb+'?w=150&fm=png&fl=png8' data-src=data.book_thumb+'?w=600')
+        .flex-item
+            h2(class=css.title) Complete Cloud Compliance
+            h3(class=css.subhead) Get your copy today
+            p(class=css.p) 
+                span.headline-4 Softcover: 
+                a(rel="external" href="https://www.amazon.com/Complete-Cloud-Compliance-Risk-Transformation/dp/1364016451/") Amazon 
+                |, 
+                a(rel="external" href="https://www.barnesandnoble.com/w/complete-cloud-compliance-travis-good/1129933809?ean=9781364016456") Barnes & Noble
+            p(class=css.p)
+                span.headline-4 Hardcover: 
+                a(rel="external" href="http://www.blurb.com/b/9029120-complete-cloud-compliance-how-regulated-industries") Blurb
